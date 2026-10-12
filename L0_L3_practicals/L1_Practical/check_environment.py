@@ -17,7 +17,7 @@ else:
     print("\nAll packages found. You are ready.")
 
 # course data: the images in ml4eo/data (this script sits in ml4eo/L1_Practical)
-data = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
+data = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data") if os.path.isdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data")) else os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 if os.path.isdir(data):
     tiffs = [f for f in os.listdir(data) if f.endswith(".tiff")]
     print(f"\n  OK       data folder with {len(tiffs)} image files (expect 48)")
