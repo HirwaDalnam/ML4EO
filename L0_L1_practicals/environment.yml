@@ -1,0 +1,30 @@
+# ML4EO course environment (Lectures 1-10)
+# Create:  conda env create -f environment.yml
+# Update:  conda env update -f environment.yml --prune
+# Use:     conda activate ml4eo
+name: ml4eo
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  # core scientific stack
+  - numpy
+  - pandas
+  - matplotlib
+  - scipy
+  - scikit-learn
+  - scikit-image
+  # raster and vector data
+  - tifffile
+  - rasterio
+  - geopandas
+  - shapely
+  - pyproj
+  - xarray
+  - rioxarray
+  # notebooks
+  - jupyterlab
+  - ipykernel
+  # Google Earth Engine - uncomment from Lecture 10
+  # - earthengine-api
+  # - geemap
